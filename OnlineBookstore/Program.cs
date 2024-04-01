@@ -10,7 +10,7 @@ builder.Services.AddDbContext<OnlineBookstoreContext>(options =>
 {
     options.UseSqlite(builder.Configuration["ConnectionStrings:WaterConnection"]);
 }
-)
+);
 
 var app = builder.Build();
 

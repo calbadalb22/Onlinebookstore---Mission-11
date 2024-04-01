@@ -9,7 +9,7 @@ namespace OnlineBookstore.Controllers
 
         public HomeController()
         {
-           
+
         }
 
         public IActionResult Index()
@@ -17,5 +17,6 @@ namespace OnlineBookstore.Controllers
             return View();
         }
 
-        
+
+    }
 }
