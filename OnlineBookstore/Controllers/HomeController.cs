@@ -6,15 +6,18 @@ namespace OnlineBookstore.Controllers
 {
     public class HomeController : Controller
     {
+        private IWaterRepository _repo;
 
-        public HomeController()
+        public HomeController(IWaterRepository temp)
         {
-
+            _repo = temp;
         }
 
         public IActionResult Index()
         {
-            return View();
+            var projectData = _repo.Projects;
+
+            return View(projectData);
         }
 
 

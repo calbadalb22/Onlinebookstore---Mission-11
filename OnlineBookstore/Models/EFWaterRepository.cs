@@ -3,6 +3,11 @@ namespace OnlineBookstore.Models
 {
     public class EFWaterRepository : IWaterRepository
     {
-        public IQueryable<Project> Projects => throw new NotImplementedException();
+        private OnlineBookstoreContext _context;
+        public EFWaterRepository(OnlineBookstoreContext temp) 
+        {
+
+        }
+        public IQueryable<Project> Projects => _context.Projects;
     }
 }

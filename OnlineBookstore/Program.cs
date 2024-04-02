@@ -12,6 +12,7 @@ builder.Services.AddDbContext<OnlineBookstoreContext>(options =>
 }
 );
 
+builder.Services.AddScoped<IWaterRepository, EFWaterRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
